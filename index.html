@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>지점정렬</title>
+    <link rel="icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css?20230411" />
+    <script src="./js/jquery-3.3.1.min.js?20230411"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div><p id="title">롯데백화점 지점순서</p></div>
+
+      <div id="storelist"><h3 id="departmentStore"></h3></div>
+
+    <div id="form1">
+      <span>구분자가 </span
+      ><span style="color: blue; font-weight: bold"> ,(콤마)</span
+      ><span> 또는 </span
+      ><span style="color: blue; font-weight: bold"> /(슬래쉬)</span
+      ><span> 일 경우</span><br />
+      <div id="btn_div">
+      <textarea
+        cols="100"
+        rows="4"
+        id="data_2"
+        placeholder="ex) 강남점,부산본점,청주점 또는 강남점/부산본점/청주점"
+        onkeypress="check_enter()"
+      ></textarea>
+      <button class="check_btn" id="btn" onclick="btn_click">확인</button>
+    </div>
+      <div id="countdiv"><span id="result_span">Result</span><span id="leftspan">Count:</span><span id="result_count">0</span></div>
+      <div id="div_result1" style="background-color: bisque">
+        <h2 class="h2_result1" id="result" maxlength="10000">-></h2>
+      </div>
+      <div id="div_result2" style="background-color: rgb(224, 255, 196)">
+        <h2 class="h2_result1" id="slash-result" maxlength="10000">-></h2>
+      </div>
+      <div id="div_result3" style="background-color: rgb(240, 196, 255)">
+        <h2 class="h2_result1" id="dot-result" maxlength="10000">-></h2>
+      </div>
+      <br />
+      <p id="kkk">
+        ※ 중복지점명인 롯데백화점(구리점), 롯데아울렛(구리점)은 수동으로 순서
+        바꿔주세요.
+      </p>
+      <br />
+
+      <div id="test">
+        <h3 class="h3_result" id="department_result" maxlength="10000"></h3>
+      </div>
+
+      <hr style="border: 1px solid rgb(255, 0, 0)" width="100%" />
+    </div>
+
+    <script src="./js/department.js?20230411"></script>
+    <script src="./js/etc.js?20230411"></script>
+  </body>
+</html>
