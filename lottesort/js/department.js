@@ -404,16 +404,22 @@ function btn_click() {
   if (searchresult.length > 0) {
     alert("지점명을 확인해주세요.\n" + "지점명 : " + searchresult);
   }
-  //id,brand 값이 없을 경우(기준데이터에 검색한 지점이 없을때) 얼럿 처리
+  //브랜드별로 나누는 작업
+  let brandData = sort.reduce((acc, current) => {
+    acc[current.brand] = acc[current.brand] || [];
+    acc[current.brand].push(current.branchName);
+    return acc;
+  }, {});
 
+  console.log(brandData);
+  //텍스트 출력 ( 콤마, 슬래쉬, 중간점 형식 출력 )
   const headings = document.querySelectorAll("h2_result1");
   txt4.textContent = sort.length;
   txt.textContent = sort.map((row) => row.branchName);
   txt2.textContent = sort.map((row) => row.branchName).join("/");
   txt3.textContent = sort.map((row) => row.branchName).join("·");
-
   document.textContent;
-
+  //중복지점명이 있어 해당 부분은 텍스트 색깔로 표시
   $(".h2_result1").each(function () {
     $(this).html(
       $(this)

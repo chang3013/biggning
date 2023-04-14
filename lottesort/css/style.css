@@ -140,6 +140,11 @@ input {
   height: 130px;
   display: flex;
 }
+#brandresult {
+  width: 80%;
+  height: 500px;
+  display: flex;
+}
 
 h2 {
   font-family: "Noto Sans KR", sans-serif;
@@ -164,4 +169,19 @@ h6 {
 .span special {
   color: blue;
   font-weight: 500;
+}
+
+#Abrand {
+  width: 100%;
+  height: 100px;
+}
+#Bbrand {
+  width: 80%;
+  height: 100px;
+}
+
+#brandresult {
+  width: 80%;
+  height: 700px;
+  display: flex;
 }
