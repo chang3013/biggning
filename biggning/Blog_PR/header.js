@@ -171,21 +171,21 @@ window.onload=function deviceCheck() {
 
   //동영상 캡쳐 스크립트 로직
 
-  const capbtn = document.getElementById("cap_btn");
-  const video_shot = document.querySelector("#file_video2");
-  const canvas_shot = document.querySelector("#cap_img")
-  capbtn.addEventListener('click', () => {
+  // const capbtn = document.getElementById("cap_btn");
+  // const video_shot = document.querySelector("#file_video2");
+  // const canvas_shot = document.querySelector("#cap_img")
+  // capbtn.addEventListener('click', () => {
 
 
-    video_shot.addEventListener("loadedmetadata",function(){
-    canvas_shot_CTX = canvas_shot.getContext("2d");
-    canvas_shot.width = video_shot.videoWidth;
-    canvas_shot.height = video_shot.videoHeight;
+  //   video_shot.addEventListener("loadedmetadata",function(){
+  //   canvas_shot_CTX = canvas_shot.getContext("2d");
+  //   canvas_shot.width = video_shot.videoWidth;
+  //   canvas_shot.height = video_shot.videoHeight;
     
-    setTimeout(()=>{
-      canvas_shot_CTX.drawImage(video_shot,0,0,canvas_shot.width,canvas_shot.height);
-    },50)
-  });
+  //   setTimeout(()=>{
+  //     canvas_shot_CTX.drawImage(video_shot,0,0,canvas_shot.width,canvas_shot.height);
+  //   },50)
+  // });
     // const dataURL = canvas_shot.toDataURL("image/png");
 
 
@@ -205,7 +205,7 @@ window.onload=function deviceCheck() {
     // img.innerHTML = canvas3.getContext("2d").drawImage(video2,0,0,canvas3.width,canvas3.height);
     // // img.download = "capture.png";
     // // a.click();
-  });
+  // });
 
 
 

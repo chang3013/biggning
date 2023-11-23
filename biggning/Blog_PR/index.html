@@ -73,15 +73,16 @@
                     <video id="file_video" controls style="display:none;"></video>
                     <canvas id="thumb_video"> 캔버스 영역</canvas>
                 </div><br>
-                <p id="ch2">2. 동영상 파일 업로드 후 gif로 만들기</p>
+                <p id="ch2">2. 동영상 파일 캡쳐 다운로드(png)</p>
                 <div id="gif_div">
                     <input type="file" accept="video/*" id="fileUpload2"><br>
                     <video id="file_video2" controls ></video><br>
-                    <button id="cap_btn">Capture</button><br>
+                    <button id="cap_btn" onclick="capture()">Capture</button><br>
                     <div id="cap_img"></div>
                 </div>
             </div>
             <script>
+                //1. 동영상 파일 업로드 후 미리보기 썸네일 추출하기
                 const   _VIDEO = document.querySelector("#file_video"),
                         _CANVAS = document.querySelector("#thumb_video"),
                         _CANVAS_CTX = _CANVAS.getContext("2d");
@@ -100,26 +101,34 @@
                     },50)
                 });
 
+
+                //2. 동영상 파일 캡쳐다운로드
                 document.querySelector("#fileUpload2").addEventListener('change', function() {
-                    document.querySelector("#file_video2").setAttribute('src', URL.createObjectURL(document.querySelector("#fileUpload2").files[0])); //비디오를 첨부(추가)하면 첨부된 파일을 비디오 태그에 삽입한다                
+                document.querySelector("#file_video2").setAttribute('src', URL.createObjectURL(document.querySelector("#fileUpload2").files[0])); //비디오를 첨부(추가)하면 첨부된 파일을 비디오 태그에 삽입한다                
                 });
-                const capbtn = document.getElementById("cap_btn");
-                const video_shot = document.querySelector("#file_video2");
-                const canvas_shot = document.querySelector("#cap_img")
-                const canvas_shot_CTX = canvas_shot.getContext("2d");
-                capbtn.addEventListener('click', () => {
+                function capture() {
+                    const   video = document.getElementById("file_video2");
+                    const   canvas = document.createElement("canvas");
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+                    const dataURL = canvas.toDataURL("image/png");
+                    const a = document.createElement("a");
+                    a.href = dataURL;
+                    a.download = "capture.png";
+                    // const   canvas__ = document.querySelector("#cap_img"),
+                            // canvas__CTX = canvas__.getContext("2d");
 
 
-video_shot.addEventListener("loadedmetadata",function(){
 
-canvas_shot.width = video_shot.videoWidth;
-canvas_shot.height = video_shot.videoHeight;
+                    a.click();
+                    
+                }
 
-setTimeout(()=>{
-  canvas_shot_CTX.drawImage(video_shot,0,0,canvas_shot.width,canvas_shot.height);
-},50)
-});
-});
+
+
+
+
             </script>    
             <!-- <script src="./file.js"></script> -->
         </section>
@@ -159,7 +168,7 @@ Copyright 2023. CH Company. All Rights Reserved.
 </footer>
     </div>
     <script src="header.js"></script>
-    <script src="./file.js"></script>
+    <!-- <script src="./file.js"></script> -->
 
     
 <script>

@@ -88,3 +88,44 @@
 //         alert("클릭");
 //       });
 // }
+
+
+
+
+
+
+// function capture(){
+//     const video = document.getElementById("file_video2");
+//         const canvas = document.createElement("canvas");
+//         canvas.width = video.videoWidth;
+//         canvas.height = video.videoHeight;
+//         canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+//         const dataURL = canvas.toDataURL("image/png");
+//         const a = document.createElement("a");
+//         // a.href = dataURL;
+//         // a.download = "capture.png";
+//         a.click();
+//         console.log("a");
+// }
+
+
+// window.onload = function(){
+//     const   video = document.querySelector("#file_video2"),
+//     canvas3 = document.querySelector("#cap_img"),
+//     canvas3_CTX = canvas3.getContext("2d");
+
+// document.querySelector("#fileUpload2").addEventListener('change', function() {
+// document.querySelector("#file_video2").setAttribute('src', URL.createObjectURL(document.querySelector("#fileUpload2").files[0])); //비디오를 첨부(추가)하면 첨부된 파일을 비디오 태그에 삽입한다                
+// });
+// // }
+// video.addEventListener('loademetadata',function(){
+// canvas3.width = video.videoWidth;
+// canvas3.height = video.videoHeight;
+// setTimeout(()=>{
+//     canvas3_CTX.drawImage(video,0,0,canvas3.width,canvas3.height)
+// },50
+// )
+
+// });
+// }
+
