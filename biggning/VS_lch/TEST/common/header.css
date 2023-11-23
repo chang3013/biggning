@@ -1,0 +1,73 @@
+:root {
+  /** color **/
+  --baseColor: #d2d2d2;
+  --blueColor: #22aee5;
+  /** size **/
+  --baseContainer: 79.375rem; /*1270px*/
+  /** padding **/
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  font-family: "NanumSquare", sans-serif;
+  /* color: var(--baseColor); */
+  background-color: black;
+}
+
+img {
+  width: 11.875rem;
+  padding: 0.75rem 0;
+}
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  position: absolute;
+  left: -2000px;
+}
+nav ul {
+  display: flex;
+  text-align: center;
+}
+nav ul li {
+  padding: 0 10px;
+  width: 100px;
+  list-style-type: none;
+}
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  line-height: 3rem;
+  font-weight: bold;
+  font-size: 1.0625rem;
+  color: var(--baseColor);
+  text-decoration-line: none;
+}
+
+nav ul li a:hover {
+  color: var(--blueColor);
+  opacity: 1;
+}
+
+li a.active {
+  color: var(--blueColor);
+}
+
+nav ul li a:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blueColor);
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li:hover a:after {
+  opacity: 1;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Copy
+    <svg xmlns="http://www.w3.org/2000/svg" width="1005" height="997" viewBox="0 0 1005 997" fill="none">
+      <path
+        d="M961.736 283.018L670.721 405.963C638.847 345.654 575.474 304.555 502.5 304.555C475.286 304.555 441.408 310.271 418 320.567L577 0C757.719 13.6855 895.585 129.319 961.736 283.018Z"
+        fill="#05BECC"
+        class="area"
+        data-index="01"
+      />
+      <path
+        d="M1005 494.638C1005 612.867 964.147 721.557 895.783 807.368L656.931 605.548C679.401 574.334 692.635 536.031 692.635 494.638C692.635 468.326 687.288 443.263 677.62 420.476L967.993 298.214C992.084 359.439 1005 426.199 1005 494.638Z"
+        fill="#05BECC"
+        class="area"
+        data-index="02"
+      />
+      <path
+        d="M885.911 819.376C793.737 928.036 656.175 997 502.5 997C446.8 997 393.216 987.982 343.143 971.322L450.66 677.57C467.14 682.228 484.529 684.721 502.5 684.721C560.828 684.721 613.022 658.464 647.9 617.127L885.911 819.376Z"
+        fill="#05BECC"
+        class="area"
+        data-index="03"
+      />
+      <path
+        d="M313.289 513.5C320.519 586.876 369.485 647.998 436.131 672.819L326.675 965.522C141.455 896.622 8.0063 721.922 0.347656 514.5L313.289 513.5Z"
+        fill="#05BECC"
+        class="area"
+        data-index="04"
+      />
+    </svg>
+
+    <script>
+      const areas = document.querySelectorAll('.area');
+
+      areas.forEach((ele) => {
+        ele.addEventListener('click', (e) => {
+          alert(e.target.dataset.index);
+        });
+      });
+    </script>
+  </body>
+</html>

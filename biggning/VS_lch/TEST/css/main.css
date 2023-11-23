@@ -1,0 +1,38 @@
+:root {
+  /** color **/
+  --baseColor: #d2d2d2;
+  --blueColor: #22aee5;
+  /** size **/
+  --baseContainer: 79.375rem; /*1270px*/
+  /** padding **/
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  font-family: "NanumSquare", sans-serif;
+  /* color: var(--baseColor); */
+  background-color: black;
+}
+
+.container {
+  width: var(--baseContainer);
+  margin: 0 auto;
+}
+
+/* 질문 폼 */
+.Contents {
+  color: white;
+}
+#d0 {
+  display: none;
+}
+#d1 {
+  display: none;
+}
+#d2 {
+  display: none;
+}
+
+/* show */

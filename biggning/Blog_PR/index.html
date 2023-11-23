@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <script src="header.js"></script> -->
+    <!-- <script src="./file.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.google.com/#QuickUsePlace:quickUse/Family:Roboto" rel="stylesheet" type="text/css">
+    <title>CH Company</title>
+</head>
+<body>
+    <div class="wrap">
+        <!--header-->
+        <header>
+
+            <div class="hdarea">
+                <a href=""><img class="logo1" src="./img/logo.png"></a>
+                <nav class="webnav">
+                    <ul id="webul">
+                        <li calss="gnb"><a class="btn" id="b0" href=“#menu1” onclick="btn1Function(); return false;">Service</a></li>
+                        <li calss="gnb"><a class="btn" id="b1" href="#menu2" onclick="btn2Function(); return false;">Project</a></li>
+                        <li calss="gnb"><a class="btn" id="b2" href="#menu3" onclick="btn3Function(); return false;">Community</a></li>
+                        <li calss="gnb"><a class="btn" id="b3" href="#menu4" onclick="btn4Function(); return false;">Help Desk</a></li>
+                    </ul>
+                </nav>
+                <nav class="monav">
+                    <input type="checkbox" id="icon">
+                    <label for="icon">  <!--label은 인라인 스타일-->
+                        <span class="lb"></span>
+                        <span class="lb"></span>
+                        <span class="lb"></span>
+                    </label>
+                    <div class="msidemenu">
+                        <ul>
+                            <li><a class="mbtn" id="mb0" href="#menu1" onclick="btn1Function(); return false;">Service</a></li>
+                            <li><a class="mbtn" id="mb1" href="#menu2" onclick="btn2Function(); return false;">Project</a></li>
+                            <li><a class="mbtn" id="mb2" href="#menu3" onclick="btn3Function(); return false;">Community</a></li>
+                            <li><a class="mbtn" id="mb3" href="#menu4" onclick="btn4Function(); return false;">Help Desk</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="s0" id="main_sec">
+            <div id="main1"><pre class="maintext">
+안녕하세요 🤗
+<span class="sub1">CH Company</span>에 오신걸 환영합니다 !
+지금까지 제가 업무를 하면서
+접했던 <b>기술/정보</b>들을 정리하는 <span class="sub1">블로그</span> 입니다.
+                </pre></div>
+            <div id="main2"><img id="mainimg1" src="./img/main_img1.png"></div>
+            <div id="main3">
+                <pre class="maintext">
+앞으로도 업무를 하면서
+접하게 될 기술들을 추가하겠습니다.
+🤔
+잘 쉬었다 가세요! 잘 부탁드립니다. 🙇‍♂️
+</pre>
+            </div>
+            <div id="main4"><img id="mainimg2" src="./img/main_img2.png"> </div>
+        </section>
+
+        <section class="s1" id="sec0">
+            <!-- <script src="file.js"></script> -->
+            <div class="page">
+                <p id="ch1"> 1. 동영상 파일 업로드 후 미리보기 썸네일 추출하기</p><br>
+                <div id="file_div">
+                    <input type="file" id="fileUpload" multiple='multiple' accept="video/*"><br>
+                    <video id="file_video" controls style="display:none;"></video>
+                    <canvas id="thumb_video"> 캔버스 영역</canvas>
+                </div><br>
+                <p id="ch2">2. 동영상 파일 업로드 후 gif로 만들기</p>
+                <div id="gif_div">
+                    <input type="file" accept="video/*" id="fileUpload2"><br>
+                    <video id="file_video2" controls ></video><br>
+                    <button id="cap_btn">Capture</button><br>
+                    <div id="cap_img"></div>
+                </div>
+            </div>
+            <script>
+                const   _VIDEO = document.querySelector("#file_video"),
+                        _CANVAS = document.querySelector("#thumb_video"),
+                        _CANVAS_CTX = _CANVAS.getContext("2d");
+                document.querySelector("#fileUpload").addEventListener('change', function() {
+                    document.querySelector("#file_video").setAttribute('src', URL.createObjectURL(document.querySelector("#fileUpload").files[0])); //비디오를 첨부(추가)하면 첨부된 파일을 비디오 태그에 삽입한다
+                });
+                _VIDEO.addEventListener('loadedmetadata', function() { //비디오 태그의 메타데이터가 들어오면
+                    _CANVAS.width = _VIDEO.videoWidth;
+                    _CANVAS.height = _VIDEO.videoHeight;
+                    // console.log(_VIDEO.duration, _VIDEO.currentTime);
+                    const time = Math.random() * _VIDEO.duration; //비디오의 영상길이 중 랜덤 타임을 뽑음
+                    _VIDEO.currentTime = time; //해당 시간으로 이동
+                    console.log(time);
+                    setTimeout(()=>{ //바로 출력하면 비디오가 불러오기 전이라 동작이 안됨. 잠깐의 기다림 후 캔버스에 해당 이미지를 그림.
+                        _CANVAS_CTX.drawImage(_VIDEO, 0, 0, _VIDEO.videoWidth, _VIDEO.videoHeight);
+                    },50)
+                });
+
+                document.querySelector("#fileUpload2").addEventListener('change', function() {
+                    document.querySelector("#file_video2").setAttribute('src', URL.createObjectURL(document.querySelector("#fileUpload2").files[0])); //비디오를 첨부(추가)하면 첨부된 파일을 비디오 태그에 삽입한다                
+                });
+                const capbtn = document.getElementById("cap_btn");
+                const video_shot = document.querySelector("#file_video2");
+                const canvas_shot = document.querySelector("#cap_img")
+                const canvas_shot_CTX = canvas_shot.getContext("2d");
+                capbtn.addEventListener('click', () => {
+
+
+video_shot.addEventListener("loadedmetadata",function(){
+
+canvas_shot.width = video_shot.videoWidth;
+canvas_shot.height = video_shot.videoHeight;
+
+setTimeout(()=>{
+  canvas_shot_CTX.drawImage(video_shot,0,0,canvas_shot.width,canvas_shot.height);
+},50)
+});
+});
+            </script>    
+            <!-- <script src="./file.js"></script> -->
+        </section>
+        
+        <section class="s1" id="sec1"><div class="page">메뉴2 색션페이지</div></section>
+        
+        <section class="s1" id="sec2"><div class="page">메뉴3 색션페이지</div></section>
+        
+        <section class="s1" id="sec3"><div class="page">메뉴4 색션페이지</div></section>
+
+
+
+<footer id="ft1">
+    <div id="ftarea">
+        <nav>
+            <p>
+               <div class="foot1"> 
+                    <span class="footer2">
+                        Writer : David (Chang Hyun) <br/></span>
+                    <span class="footer2">
+                        E-Mail : sktest0418@naver.com</span><br/>
+                </div>
+                <div class="foot2">
+                    <span class="footer1">Copyright 2023. CH Company. All Rights Reserved.</span>
+                </div>
+                <div id="m_foot">
+                    <pre id="m_txt">
+Wirter : David (Chang Hyun)
+E-Mail : sktest0418@naver.com
+Copyright 2023. CH Company. All Rights Reserved.
+                    </pre>
+
+                </div>
+            </p>
+        </nav>
+    </div>
+</footer>
+    </div>
+    <script src="header.js"></script>
+    <script src="./file.js"></script>
+
+    
+<script>
+    $(".btn,.mbtn").on("click",function(){
+    $('html, body').animate({
+        scrollTop : 0
+    },400)
+    return false;
+});
+</script>
+<!-- <script src="file.js"></script> -->
+</body>
+
+</html>
