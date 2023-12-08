@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/biggning/Hompage/sub/etc.css" />
+    <script
+      type="text/javascript"
+      src="/biggning/Hompage/common/includeHTML.js"
+    ></script>
+    <title>Homepage</title>
+  </head>
+  <body>
+    <header include-html="/biggning/Hompage/common/header.html"></header>
+    <div id="wrap">
+      <p>Etc 페이지 입니다.</p>
+      <span> 추가 예정입니다.</span>
+      <nav id="catenav">
+        <div
+          class="cate"
+          id="cateall"
+          onclick="cate_function(this); return false;"
+        >
+          전체
+        </div>
+        <div
+          class="cate"
+          id="cate1"
+          onclick="cate_function(this); return false;"
+        >
+          1번카테고리
+        </div>
+        <div
+          class="cate"
+          id="cate2"
+          onclick="cate_function(this); return false;"
+        >
+          2번카테고리
+        </div>
+      </nav>
+      <div id="test_div">
+        <div id="img_div">
+          <img id="img_target" src="" />
+        </div>
+        <div id="btn_div">
+          <div
+            class="testbtn"
+            id="btn0"
+            onclick="btn_test(this); return false;"
+          ></div>
+          <div
+            class="testbtn"
+            id="btn1"
+            onclick="btn_test(this); return false;"
+          ></div>
+          <div
+            class="testbtn"
+            id="btn2"
+            onclick="btn_test(this); return false;"
+          ></div>
+          <div
+            class="testbtn"
+            id="btn3"
+            onclick="btn_test(this); return false;"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <footer include-html="/biggning/Hompage/common/footer.html"></footer>
+    <script>
+      includeHTML();
+    </script>
+  </body>
+  <script src="/biggning/Hompage/sub/etc.js"></script>
+  <script defer src="/biggning/Hompage/common/header.js"></script>
+</html>

@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  top: 100px;
+}
+.dark {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.dark #header_area {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.light {
+  background: #fff;
+  color: #333;
+}
+
+#test_div {
+  text-align: -webkit-center;
+}
+
+#img_div {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* background: url(/biggning/Hompage/img/reference/11.\ the\ hyundai.png) */
+  /* no-repeat; */
+  /* background-size: contain; */
+  /* object-fit: fill; */
+  /* background-size: contain; */
+}
+
+#img_target {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#btn_div {
+  display: flex;
+  justify-content: center;
+}
+
+#catenav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cate {
+  width: 100px;
+}
+
+.testbtn {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+#btn0 {
+  background-image: url(/biggning/Hompage/img/reference/Project0.png);
+  background-size: 100%;
+}
+#btn1 {
+  background-image: url(/biggning/Hompage/img/reference/Project10.png);
+  background-size: 100%;
+}
+
+#btn2 {
+  background-image: url(/biggning/Hompage/img/reference/Project12.png);
+  background-size: 100%;
+}
+
+#btn3 {
+  background-image: url(/biggning/Hompage/img/reference/Project4.png);
+  background-size: 100%;
+}

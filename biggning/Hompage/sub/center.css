@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  top: 100px;
+}
+
+.dark {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.dark #header_area {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.light {
+  background: #fff;
+  color: #333;
+}
+
+#center_div {
+  color: cornflowerblue;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+#email {
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: crimson;
+}
+
+img {
+  width: 650px;
+  height: 350px;
+}
