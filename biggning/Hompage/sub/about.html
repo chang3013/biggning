@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="preload" as="script" href="/biggning/Hompage/common/header.js" /> -->
+    <link rel="icon" href="/biggning/Hompage/img/favicon.png" />
     <title>Homepage</title>
     <link rel="stylesheet" href="/biggning/Hompage/sub/about.css" />
+    <link
+      rel="stylesheet"
+      href="/biggning/Hompage/common/swiper-bundle.min.css"
+    />
+    <script src="/biggning/Hompage/common/swiper-bundle.min.js"></script>
     <script
       type="text/javascript"
       src="/biggning/Hompage/common/includeHTML.js"
@@ -14,32 +20,46 @@
   <body>
     <header include-html="/biggning/Hompage/common/header.html"></header>
     <div id="about_div">
-      <p id="about_p">
-        <span> About ... </span><br />
-        <img
-          class="a_img"
-          id="a_img1"
-          src="/biggning/Hompage/img/about/coding_1280.jpg"
-        /><br />
-        <span> 영역 입니다만?</span><br />
-        <img
-          class="a_img"
-          id="a_img2"
-          src="/biggning/Hompage/img/about/road_1280.jpg"
-        /><br />
-        <span>열심히 일을 합니다</span><br />
-        <img
-          class="a_img"
-          id="a_img3"
-          src="/biggning/Hompage/img/about/leaves_1280.jpg"
-        /><br />
-        <span>여행을 떠나봅시다</span>
-      </p>
+      <div id="contentsbox">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="/biggning/Hompage/img/about/coding_1280.jpg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="/biggning/Hompage/img/about/leaves_1280.jpg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="/biggning/Hompage/img/about/road_1280.jpg"
+              />
+            </div>
+          </div>
+
+          <!-- 페이징 필요시 추가 -->
+          <div class="swiper-pagination">
+            <span class="swiper-pagination-bullet"></span>
+          </div>
+          <!-- 이전, 다음 버튼 필요시 추가 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
     </div>
     <footer include-html="/biggning/Hompage/common/footer.html"></footer>
     <script>
       includeHTML();
     </script>
   </body>
+  <script defer src="/biggning/Hompage/sub/about.js"></script>
   <script defer src="/biggning/Hompage/common/header.js?"></script>
 </html>

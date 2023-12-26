@@ -59,15 +59,18 @@ function click_function(btnid) {
   modal.style.transform = "translateZ(0)";
   modal.style.animation = "fadeInUp 1s";
   modal2.style.zIndex = "10";
-  modal2.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
+
+  // modal2.scrollIntoView({
+  //   behavior: "smooth",
+  //   block: "start",
+  //   inline: "nearest",
+  // });
 }
 
 function close_btn() {
-  modal.style.display = "none";
+  modal.style.transform = "translate3d(0,100%,0)";
+  modal.style.animation = "fadeInDown 1s";
+  // modal.style.display = "none";
   modal.style.zIndex = "0";
   modal2.style.zIndex = "0";
 }
@@ -125,3 +128,11 @@ function cate_btn(e) {
     document.getElementById("img-box12").style.display = "none";
   }
 }
+
+window.addEventListener("keydown", (e) => {
+  const key = document.getElementById(e.key);
+  // console.log(e);
+  if (e.key == "Escape") {
+    close_btn();
+  }
+});

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/biggning/Hompage/game/game.css" />
+    <title>mobile</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="main_title">
+        <img src="/biggning/Hompage/game/game/title_2.png" />
+      </div>
+      <div
+        id="game_main"
+        style="background-image: url(/biggning/Hompage/game/game/screen_bg.png)"
+      >
+        <div id="ai_area">
+          <img src="/biggning/Hompage/game/game/bawi_choice.png" />
+          <img src="/biggning/Hompage/game/game/gawi_choice.png" />
+          <img src="/biggning/Hompage/game/game/bo_choice.png" />
+        </div>
+      </div>
+      <div id="game_start">
+        <img
+          id="start_btn"
+          onclick="scroll_function(); start_click();  return false;"
+          src="/biggning/Hompage/game/game/start_btn.png"
+        />
+        <img
+          id="restart_btn"
+          onclick="gomain(); return false;"
+          src="/biggning/Hompage/game/game/restart_btn.png"
+        />
+      </div>
+      <div id="game_screen">
+        <img id="game_bg" src="/biggning/Hompage/game/game/screen_bg.png" />
+        <div id="play_screen">
+          <img id="ai_result" src="/biggning/Hompage/game/game/etc.png" />
+          <p id="vs_txt">VS</p>
+          <img id="player_result" src="/biggning/Hompage/game/game/etc.png" />
+        </div>
+        <div id="result_txt">결과 텍스트</div>
+      </div>
+      <div id="btn_bg">
+        <img id="btn_imgbg" src="/biggning/Hompage/game/game/btn_bg.png" />
+        <div id="btn_area">
+          <img
+            class="p_btn"
+            id="bawi_btn"
+            onclick="btn_select(this); return false;"
+            src="/biggning/Hompage/game/game/bawi_btn.png"
+          />
+          <img
+            class="p_btn"
+            id="gawi_btn"
+            onclick="btn_select(this); return false;"
+            src="/biggning/Hompage/game/game/gawi_btn.png"
+          />
+          <img
+            class="p_btn"
+            id="bo_btn"
+            onclick="btn_select(this); return false;"
+            src="/biggning/Hompage/game/game/bo_btn.png"
+          />
+        </div>
+      </div>
+      <div id="result_area">
+        <div id="submit_btn">
+          <img
+            id="submit_img"
+            onclick="submit_function(); return false;"
+            src="/biggning/Hompage/game/game/submit_btn.png"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script defer src="/biggning/Hompage/game/game.js"></script>
+</html>

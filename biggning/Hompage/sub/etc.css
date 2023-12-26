@@ -84,3 +84,33 @@ body {
   background-image: url(/biggning/Hompage/img/reference/Project4.png);
   background-size: 100%;
 }
+#game_btn {
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* align-self: center; */
+}
+#game_img {
+  width: 200px;
+  height: 200px;
+}
+
+#link_test {
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  text-align: -webkit-center;
+}
+
+#input_link {
+  position: relative;
+  display: flex;
+}
+
+#download_btn {
+  position: relative;
+  display: flex;
+}

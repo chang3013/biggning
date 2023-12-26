@@ -5,12 +5,12 @@
 const len = document.querySelectorAll(".testbtn");
 const imgbox = document.getElementById("img_target");
 const targetfile = "/biggning/Hompage/img/reference/Project";
-console.log(len);
+// console.log(len);
 function btn_test(e) {
   const targetid = document
     .getElementById(e.getAttribute("id"))
     .getAttribute("id");
-  console.log(targetid);
+  // console.log(targetid);
   if (targetid != "") {
     for (var i = 0; i < len.length; i++) {
       //   console.log("통과");
@@ -26,7 +26,7 @@ function cate_function(e) {
   const targetid2 = document
     .getElementById(e.getAttribute("id"))
     .getAttribute("id");
-  console.log(targetid2);
+  // console.log(targetid2);
   // for (var j = 0; j < category.length; j++) {
   if (targetid2 == category[0]) {
     document.getElementById("btn0").style.display = "block";
@@ -48,3 +48,21 @@ function cate_function(e) {
   }
 }
 // }
+
+function link_down() {
+  fetch("https://source.unsplash.com/random")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.blob();
+    })
+    .then((blob) => {
+      const imgElement = document.createElement("img");
+      imgElement.src = URL.createObjectURL(blob);
+      document.body.appendChild(imgElement);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}

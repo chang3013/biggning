@@ -142,7 +142,7 @@ footer {
 }
 /* 팝업화면 */
 .modal {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   /* background-color: #1f1f1f; */
@@ -162,15 +162,30 @@ footer {
     transform: translateZ(0);
   }
 }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
 .modal #modal_pop {
-  position: relative;
+  position: fixed;
   display: none;
-  top: 100px;
+  top: 0;
   left: 0;
   background-color: #1f1f1f;
   width: 100%;
   height: 100%;
+  min-height: 700px;
   z-index: 0;
+  overflow: auto;
+  margin: 100px auto;
 }
 
 .modal #modal_pop {
@@ -188,7 +203,7 @@ footer {
   width: 900px;
   height: 400px;
   background-size: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .textbox {

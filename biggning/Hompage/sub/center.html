@@ -7,30 +7,71 @@
       type="text/javascript"
       src="/biggning/Hompage/common/includeHTML.js"
     ></script>
+    <link rel="icon" href="/biggning/Hompage/img/favicon.png" />
     <!-- <script defer src="/biggning/Hompage/common/header.js"></script> -->
     <link rel="stylesheet" href="/biggning/Hompage/sub/center.css" />
     <title>Homepage</title>
   </head>
   <body>
     <header include-html="/biggning/Hompage/common/header.html"></header>
-    <div id="center_div">
-      <p>
-        고객센터<br />
-        <span
-          >안녕하세요. 문의사항이 있으시면 아래 이메일로 메일
-          부탁드립니다.</span
-        ><br />
-        <img src="/biggning/Hompage/img/contents/desk_600.png" /><br />
-        <span id="email">email : chang3013@naver.com</span><br /><br />
-        <span>문의하실 내용을 위 이메일 주소로 보내주시면 감사하겠습니다.</span
-        ><br />
-        <img src="/biggning/Hompage/img/contents/iceland_600.png" /><br />
-        <span>편안한 하루 되세요!</span><br />
+    <div id="container">
+      <div id="center_div">
+        <h3 id="title">고객센터</h3>
         <img
-          id="center_img4"
-          src="/biggning/Hompage/img/about/road_1280.jpg"
-        /><br />
-      </p>
+          id="banner_center"
+          src="/biggning/Hompage/img/center/banner_main.png"
+        />
+        <div id="ex_col" onclick="col_click(); return false;">
+          <p id="col">펼치기</p>
+          <img id="icon_ex" src="/biggning/Hompage/img/center/expand.png" />
+        </div>
+        <div id="form_area">
+          <div id="form_s1" class="form_ss">
+            <div class="sub_form" id="subject">제목</div>
+            <input
+              class="input_sub"
+              id="sub_txt"
+              type="text"
+              required
+              placeholder="제목"
+            />
+          </div>
+          <div id="form_s2" class="form_ss">
+            <div class="sub_form" id="date_sub">날짜</div>
+            <input
+              class="input_sub"
+              id="date_txt"
+              type="text"
+              required
+              placeholder="날짜"
+            />
+          </div>
+          <div id="form_s3" class="form_ss">
+            <div class="sub_form" id="name_sub">작성자</div>
+            <input
+              class="input_sub"
+              id="name_txt"
+              type="text"
+              required
+              placeholder="작성자"
+            />
+          </div>
+          <div id="form_s4" class="form_ss">
+            <div class="sub_form" id="txt_sub">내용</div>
+            <textarea
+              id="ta"
+              type="text"
+              placeholder="내용을 작성해주세요."
+            ></textarea>
+          </div>
+        </div>
+        <div id="email_banner">
+          <img
+            id="email_img"
+            src="/biggning/Hompage/img/center/email_banner.png"
+          />
+        </div>
+      </div>
     </div>
     <footer include-html="/biggning/Hompage/common/footer.html"></footer>
 
@@ -38,5 +79,6 @@
       includeHTML();
     </script>
   </body>
+  <script defer src="/biggning/Hompage/sub/center.js"></script>
   <script defer src="/biggning/Hompage/common/header.js?"></script>
 </html>
