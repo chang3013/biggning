@@ -19,9 +19,14 @@ body {
   background: #fff;
   color: #333;
 }
+footer {
+  /* position: fixed; */
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
 
 #network_div {
-  /* text-align: center; */
   /* text-align: center; */
   padding: 0;
   margin: 0;
@@ -30,77 +35,54 @@ body {
   padding-bottom: 30px;
   /* top: 100px; */
 }
-#sec1 {
-  /* opacity: 0; */
+#sec01 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#img1 {
+  width: 600px;
+  height: 450px;
+}
+#sec02 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#baseball {
+  width: 600px;
+  height: 400px;
+  background-color: beige;
+  display: inline-block;
+  position: relative;
+  text-align: -webkit-center;
+}
+#target {
+  width: 100%;
+  height: 50px;
+  background-color: skyblue;
+  color: brown;
+  text-align: center;
 }
 
-#sec2 {
-  /* opacity: 1; */
-  /* transition: all 0.2s ease; */
+#txt_input {
+  width: 300px;
+  height: 50px;
 }
-
-#title {
-  font-weight: 600;
-  font-size: 60px;
+#p1 {
+  color: red;
 }
-
-img {
-  height: 550px;
-  width: 850px;
+#game_btn {
+  width: 80px;
+  height: 30px;
 }
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translateZ(0);
-  }
+#regame_btn {
+  width: 80px;
+  height: 30px;
 }
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translateZ(0);
-  }
-}
-
-/* @keyframes reverseRight {
-  0% {
-    opacity: 1;
-    transform: translateZ(0);
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-} */
-
-#img3 {
-  display: none;
-  /* transform: translate3d(-100%, 0, 0); */
-}
-
-.add {
-  /* opacity: 1;
-  transform: translateZ(0); */
-  animation: fadeInRight 1.3s;
-}
-
-.remove {
-  animation: reverseRight 1.3s;
-  display: none;
-}
-
-#p3 {
-  animation: fadeInRight 1.3s;
-}
-
-.active #img3 {
-  animation: fadeInLeft 1.3s;
+#result {
+  background-color: burlywood;
+  width: 100%;
+  height: 50px;
+  color: blue;
 }

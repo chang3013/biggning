@@ -18,3 +18,15 @@ new Swiper(".swiper", {
     clickable: true,
   },
 });
+
+const btnProgressElem = document.querySelector(".progress_btn");
+const btnInitiateElem = document.querySelector(".initiate_btn");
+const progressBarElem = document.querySelector(".progress-bar__bar");
+btnProgressElem.addEventListener("click", () => {
+  progressBarElem.classList.add("active");
+});
+btnInitiateElem.addEventListener("click", () => {
+  progressBarElem.classList.remove("active");
+});
+
+//주사위 게임

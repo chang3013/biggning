@@ -14,75 +14,24 @@
   <body>
     <header include-html="/biggning/Hompage/common/header.html"></header>
     <div id="network_div">
-      <div>
-        <p id="title">이펙트 연습</p>
-      </div>
-      <div id="sec1">
-        <img src="/biggning/Hompage/img/network/1. earth-2254769_1280.jpg" />
-        <p>
-          Miracles happen to only those who believe in them.<br />
-          기적은 그것을 믿는 사람에게만 일어난다.<br />
-          Think like a man of action and act like man of thought.<br />
-          행동하는 사람처럼 생각하고, 생각하는 사람처럼 행동하라. <br />
-          Courage is very important. Like a muscle, it is strengthened by use.
-          <br />
-          용기는 대단히 중요하다. 근육과 같이 사용함으로써 강해진다. <br />
-          Life is the art of drawing sufficient conclusions from insufficient
-          premises. <br />
-          인생이란 불충분한 전제로부터 충분한 결론을 끌어내는 기술이다. <br />
-          By doubting we come at the truth. <br />
-          의심함으로써 우리는 진리에 도달한다<br />
-        </p>
-      </div>
-      <div id="sec2">
+      <div id="sec01">
         <img
-          id="img2"
-          src="/biggning/Hompage/img/network/2. flower-field-250016_1280.jpg"
+          id="img1"
+          src="/biggning/Hompage/img/network/1. earth-2254769_1280.jpg"
         />
-        <p id="p2">
-          A man that has no virtue in himself, ever envies virtue in others.<br />
-          자기에게 덕이 없는 자는 타인의 덕을 시기한다. <br />
-          When money speaks, the truth keeps silent.<br />
-          돈이 말할 때는 진실은 입을 다문다. <br />
-          Better the last smile than the first laughter.<br />
-          처음의 큰 웃음보다 마지막의 미소가 더 좋다. <br />
-          In the morning of life, work; in the midday, give counsel; in the
-          evening, pray. <br />
-          인생의 아침에는 일을 하고, 낮에는 충고하며, 저녁에는 기도하라.<br />
-          Painless poverty is better than embittered wealth.<br />
-          고통 없는 빈곤이 괴로운 부 보다 낫다.<br />
-          A poet is the painter of the soul.<br />
-          시인은 영혼의 화가이다.<br />
-        </p>
+        <p></p>
       </div>
-      <div id="sec3">
-          <img
-            id="img3"
-            class="test"
-            src="/biggning/Hompage/img/network/3. ireland-1971997_1280.jpg"
-          />
-          <p id="p3">
-            Error is the discipline through which we advance. <br />
-            잘못은 그것을 통하여 우리가 발전할 수 있는 훈련이다. <br />
-            Faith without deeds is useless. <br />
-            행함이 없는 믿음은 쓸모가 없다. <br />
-            Weak things united become strong. <br />
-            약한 것도 합치면 강해진다. <br />
-            We give advice, but we cannot give conduct. <br />
-            충고는 해 줄 수 있으나, 행동하게 할 수는 없다. <br />
-            Nature never deceives us; it is always we who deceive ourselves.
-            <br />
-            자연은 인간을 결코 속이지 않는다. 우리를 속이는 것은 항상 우리
-            자신이다.<br />
-            Forgiveness is better than revenge.<br />
-            용서는 복수보다 낫다.<br />
-            We never know the worth of water till the well is dry.<br />
-            우물이 마르기까지는 물의 가치를 모른다. <br />
-            Pain past is pleasure.<br />
-            지나간 고통은 쾌락이다.<br />
-            Books are ships which pass through the vast seas of time.<br />
-            책이란 넓고 넓은 시간의 바다를 지나가는 배다.<br />
-          </p>
+      <div id="sec02">
+        <div id="baseball">
+          <div id="target">
+            야구게임<br />
+            <p id="p1">중복하지 않는 세자리 숫자를 입력하세요! ( 0 ~ 9 )</p>
+          </div>
+
+          <input id="txt_input" type="text" maxlength="3" /><br />
+          <button id="game_btn" onclick="game_submit()">제출</button>
+          <button id="regame_btn" onclick="regame()">다시하기</button>
+          <div id="result"></div>
         </div>
       </div>
     </div>
